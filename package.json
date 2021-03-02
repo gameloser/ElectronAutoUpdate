@@ -4,9 +4,15 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder build --mac --win --publish never",
+    "deploy": "electron-builder build --mac --win --publish always"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/gameloser/ElectronAutoUpdate.git"
+  },
   "keywords": [
     "Electron",
     "quick",
@@ -14,9 +20,13 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
+  "author": "ted",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^11.3.0"
+    "electron": "^11.3.0",
+    "electron-builder": "^22.10.5"
+  },
+  "dependencies": {
+    "electron-updater": "^4.3.8"
   }
 }
